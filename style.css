@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7ff;
+    color: #222;
+}
+
+header {
+    background: #4f46e5;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    min-height: 500px;
+    padding: 80px 20px;
+    text-align: center;
+    background: #e0e7ff;
+}
+
+.hero h1 {
+    font-size: 45px;
+    color: #312e81;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 13px 20px;
+    margin: 7px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+.section {
+    padding: 70px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    color: #312e81;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.about {
+    background: #eef2ff;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-box {
+    background: white;
+    padding: 35px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+.close {
+    float: right;
+    background: transparent;
+    color: #222;
+    font-size: 25px;
+    padding: 0;
+}
+
+#loginMessage {
+    margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
