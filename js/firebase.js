@@ -1,31 +1,23 @@
-import { initializeApp } from
-"https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-import { getAuth } from
-"https://www.gstatic.com/firebasejs/12.3.0/firebase-auth.js";
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBzGqJdJh_np9NQabOWwF-R7iNg661r7iI",
+    authDomain: "learning-outcome-analytics.firebaseapp.com",
+    projectId: "learning-outcome-analytics",
+    storageBucket: "learning-outcome-analytics.firebasestorage.app",
+    messagingSenderId: "517416070222",
+    appId: "1:517416070222:web:fd5afdd44e9ddc3be6671f",
+    measurementId: "G-KQJWJ4NTE8"
+  };
 
-import { getFirestore } from
-"https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
-
-
-const firebaseConfig = {
-
-    apiKey: "PASTE_YOUR_API_KEY",
-
-    authDomain: "PASTE_YOUR_AUTH_DOMAIN",
-
-    projectId: "PASTE_YOUR_PROJECT_ID",
-
-    storageBucket: "PASTE_YOUR_STORAGE_BUCKET",
-
-    messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
-
-    appId: "PASTE_YOUR_APP_ID"
-};
-
-
-const app = initializeApp(firebaseConfig);
-
-export const auth = getAuth(app);
-
-export const db = getFirestore(app);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
